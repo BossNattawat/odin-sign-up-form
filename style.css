@@ -1,0 +1,136 @@
+@font-face {
+    font-family: "odin-font";
+    src: url(/font/Norse-Bold.otf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img[src = "/images/bg.jpg"]{
+    height: 100vh;
+    position: absolute;
+}
+
+.logo{
+    position: absolute;
+    display: flex;
+    width: 611px;
+    height: 170px;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    gap: 10px;
+    font-family: "odin-font";
+
+    img[src="/images/odin.png"]{
+        width: 100px;
+    }
+
+    h1{
+        font-size: 90px;
+    }
+}
+
+main{
+    position: absolute;
+    left: 612px;
+    width: calc(1920px - 612px);
+    height: 100%;
+    font-family: sans-serif;
+
+    header{
+        padding: 100px 200px 70px 50px;
+        background-color: rgb(246, 251, 255);
+
+        p, h3{
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .text{
+            margin-top: 40px;
+        }
+    }
+
+    .form_wrapper{
+        display: flex;
+        justify-content: start;
+        padding: 20px 50px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        h1{
+            margin-bottom: 20px;
+        }
+
+        .inputGrid{
+            display: flex;
+            flex-direction: column;
+
+            label{
+                font-weight: bolder;
+                font-size: 13px;
+            }
+
+            input{
+                margin: 5px 0;
+                padding: 5px 5px 5px 5px;
+                font-size: 20px;
+                border: 1px solid #E5E7EB;
+                border-radius: 5px;
+            }
+
+            input:focus{
+                border: none;
+                outline: 1px solid blue;
+            }
+
+            input:valid{
+                border: none;
+                outline: 2px solid lightgreen;
+            }
+
+            input[type="password"]:invalid{
+                border: none;
+                outline: 1px solid red;
+            }
+
+        }
+
+        .inputWrapper{
+            display: grid;
+            gap: 20px 100px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+}
+
+section{
+    padding: 30px 50px;
+    
+    button{
+        background-color: #596D48;
+        border: none;
+        padding: 15px 50px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    p{
+        margin-top: 30px;
+        font-weight: bold;
+
+        a{
+            color: #596D48;
+            text-decoration: none;
+        }
+    }
+}
